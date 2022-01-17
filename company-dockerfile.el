@@ -39,7 +39,7 @@
 (require 'dockerfile-mode)
 
 (defconst dockerfile-keywords
-  '("FORM"
+  '("FROM"
     "AS"
     "RUN"
     "CMD"
@@ -70,9 +70,7 @@
   "Keywords of the dockerfile options")
 
 (defvar company-dockerfile-keywords
-  (remove-duplicates (concatenate 'list dockerfile-keywords dockerfile-option-keywords)
-                     :test (lambda (x y) (or (null y) (equal x y)))
-                     :from-end t))
+  (concatenate 'list dockerfile-keywords dockerfile-option-keywords))
 
 (defun company-dockerfile--candidates (prefix)
   (let (res)
