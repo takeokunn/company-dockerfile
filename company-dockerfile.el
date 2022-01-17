@@ -4,7 +4,7 @@
 ;; Maintainer: takeokunn
 ;; Version: 0.1
 ;; Package-Requires: ("company-mode" "dockerfile-mode")
-;; Homepage: https://github.com/takeokunn/company-solidity
+;; Homepage: https://github.com/takeokunn/company-dockerfile
 ;; Keywords: company-dockerfile company-mode dockerfile-mode
 
 
@@ -30,7 +30,7 @@
 ;;           (lambda ()
 ;;             (add-to-list 'company-backends #'company-dockerfile))
 
-;; To use this package, you must be in solidity major mode.
+;; To use this package, you must be in dockerfile major mode.
 
 ;;; Code:
 
