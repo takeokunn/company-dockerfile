@@ -70,7 +70,7 @@
   "Keywords of the dockerfile options")
 
 (defvar company-dockerfile-keywords
-  (concat 'list dockerfile-keywords dockerfile-option-keywords))
+  (cl-concatenate 'list dockerfile-keywords dockerfile-option-keywords))
 
 (defun company-dockerfile--candidates (prefix)
   (let (res)
