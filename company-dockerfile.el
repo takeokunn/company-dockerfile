@@ -38,7 +38,7 @@
 (require 'company)
 (require 'dockerfile-mode)
 
-(defconst dockerfile-keywords
+(defconst company-dockerfile-instruction-keywords
   '("FROM"
     "AS"
     "RUN"
@@ -60,7 +60,7 @@
     "SHELL")
   "Keywords of the dockerfile.")
 
-(defconst dockerfile-option-keywords
+(defconst company-dockerfile-option-keywords
   '("--platform="
     "--chown="
     "--interval="
@@ -70,7 +70,7 @@
   "Keywords of the dockerfile options")
 
 (defvar company-dockerfile-keywords
-  (cl-concatenate 'list dockerfile-keywords dockerfile-option-keywords))
+  (cl-concatenate 'list company-dockerfile-instruction-keywords company-dockerfile-option-keywords))
 
 (defun company-dockerfile--candidates (prefix)
   (let (res)
